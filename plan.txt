@@ -1,0 +1,19 @@
+Syntax
+Go routine
+Little tasks with base code to complete
+
+PostgreSQL
+Database Q model
+Migrations
+HTTP router
+Micro service
+Postman/Insomnia
+JSON-RPC
+Config (?)
+NodeJS for front
+NPM (!!)
+
+Go mod
+Docs (Swagger, openAPI)
+Docker
+
