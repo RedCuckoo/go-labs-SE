@@ -19,7 +19,6 @@ func Run(args []string) bool{
 		return false
 	}
 
-
 	app := kingpin.New("lab2", "")
 
 	migrateCmd := app.Command("migrate", "migrate command")

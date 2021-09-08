@@ -2,10 +2,9 @@ package config
 
 import (
 	"database/sql"
+	"github.com/kelseyhightower/envconfig"
 	_ "github.com/lib/pq"
 	"log"
-
-	"github.com/kelseyhightower/envconfig"
 )
 
 type Config struct {
