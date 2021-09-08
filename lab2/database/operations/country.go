@@ -5,7 +5,7 @@ import (
 	"github.com/redcuckoo/go-labs-SE/lab2/database"
 )
 
-func NewCountryQ(db *sql.DB) database.CountryDB {
+func NewCountryDB(db *sql.DB) database.CountryDB {
 	return &countryDB{
 		db:  db,
 	}
@@ -16,7 +16,7 @@ type countryDB struct {
 }
 
 func (c *countryDB) New() database.CountryDB {
-	return NewCountryQ(c.db)
+	return NewCountryDB(c.db)
 }
 
 func (c *countryDB) Get(country database.Country) (*database.Country, error) {
