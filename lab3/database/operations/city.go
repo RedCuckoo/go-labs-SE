@@ -52,7 +52,7 @@ func (c *cityDB) Select() ([]database.City, error) {
 	for rows.Next() {
 		var city database.City
 
-		err = rows.Scan(&city.Id, city.Country, city.Name, city.Population, city.Capital)
+		err = rows.Scan(&city.Id, &city.Country, &city.Name, &city.Population, &city.Capital)
 		if err != nil {
 			return nil, err
 		}
@@ -71,7 +71,7 @@ func (c *cityDB) Insert(city database.City) (database.City, error) {
 	}
 
 	if rows.Next() {
-		err = rows.Scan(&city.Id, city.Country, city.Name, city.Population, city.Capital)
+		err = rows.Scan(&city.Id, &city.Country, &city.Name, &city.Population, &city.Capital)
 		if err != nil {
 			return database.City{}, err
 		}
@@ -88,7 +88,7 @@ func (c *cityDB) Update(city database.City) (database.City, error) {
 	}
 
 	if rows.Next() {
-		err = rows.Scan(&city.Id, city.Country, city.Name, city.Population, city.Capital)
+		err = rows.Scan(&city.Id, &city.Country, &city.Name, &city.Population, &city.Capital)
 		if err != nil {
 			return database.City{}, err
 		}
