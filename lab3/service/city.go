@@ -2,6 +2,7 @@ package service
 
 import (
 	"encoding/json"
+	"fmt"
 	"github.com/google/jsonapi"
 	"github.com/redcuckoo/go-labs-SE/lab3/database"
 	"net/http"
@@ -32,6 +33,7 @@ func insertCity(w http.ResponseWriter, r *http.Request) {
 
 	err := json.NewDecoder(r.Body).Decode(&city)
 	if err != nil {
+		fmt.Println(err)
 		http.Error(w, "Failed to decode input", 500)
 		return
 	}

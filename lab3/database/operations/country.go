@@ -88,6 +88,8 @@ func (c *countryDB) Update(country database.Country) (database.Country, error) {
 		return database.Country{}, err
 	}
 
+	//TODO: fix when insert/update without id (id=0)
+
 	if rows.Next() {
 		err = rows.Scan(&country.Id, &country.Name)
 		if err != nil {

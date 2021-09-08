@@ -10,9 +10,9 @@ type CityDB interface {
 }
 
 type City struct {
-	Id         uint64
-	Country    uint64
-	Name       string
-	Population uint64
-	Capital    bool
+	Id         uint64 `json:"id,omitempty"`
+	Country    uint64 `json:"country"`
+	Name       string `json:"name"`
+	Population uint64 `json:"population"`
+	Capital    bool `json:"capital"`
 }
