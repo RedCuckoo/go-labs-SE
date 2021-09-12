@@ -41,7 +41,7 @@ func Run(args []string) bool{
 	case migrateDownCmd.FullCommand():
 		err = MigrateDown(configure)
 	case serviceCmd.FullCommand():
-		service.Main()
+		service.Run(configure)
 		return true
 	default:
 		log.Fatalf("unknown command %v", cmd)

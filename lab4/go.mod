@@ -4,6 +4,7 @@ go 1.16
 
 require (
 	github.com/alecthomas/kingpin v2.2.6+incompatible
+	github.com/deliveroo/jsonrpc-go v1.0.0
 	github.com/gobuffalo/packr/v2 v2.8.1
 	github.com/google/jsonapi v1.0.0
 	github.com/kelseyhightower/envconfig v1.4.0
